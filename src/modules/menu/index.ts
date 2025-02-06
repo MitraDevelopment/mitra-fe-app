@@ -1,53 +1,56 @@
-import { MenuItem } from "@/modules/menu/types";
+import {
+  MdHome,
+  MdCalendarMonth,
+  MdBusiness,
+  MdCoffee,
+  MdPublic,
+} from "react-icons/md";
+import { MenuItem } from "./types";
 
-export const menuItems: MenuItem[] = [
-  {
-    id: "home",
-    title: "Home",
-    path: "/",
-    icon: "home",
-  },
-
+export const menuConfig: MenuItem[] = [
   {
     id: "events",
     title: "Events",
     path: "/events",
-    icon: "events",
+    icon: MdCalendarMonth,
   },
-
   {
     id: "places",
     title: "Places",
     path: "/places",
-    icon: "places",
+    icon: MdBusiness,
   },
-
+  {
+    id: "home",
+    title: "Home",
+    path: "/",
+    icon: MdHome,
+  },
   {
     id: "cafes",
     title: "Cafes",
     path: "/cafes",
-    icon: "cafes",
+    icon: MdCoffee,
   },
-
   {
     id: "map",
     title: "Map",
     path: "/map",
-    icon: "map",
+    icon: MdPublic,
   },
 ];
 
 export const findMenuItem = (id: MenuItem["id"]): MenuItem | undefined => {
-  return menuItems.find((item) => item.id === id);
+  return menuConfig.find((item) => item.id === id);
 };
 
 export const getActiveMenuItem = (path: string): MenuItem | undefined => {
-  return menuItems.find((item) => item.path === path);
+  return menuConfig.find((item) => item.path === path);
 };
 
 export const defaultMenuState = {
-  items: menuItems,
-  activeItem: menuItems[0],
+  items: menuConfig,
+  activeItem: menuConfig[0],
 };
 
 export * from "./types";

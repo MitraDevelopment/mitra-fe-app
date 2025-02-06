@@ -70,3 +70,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Scrollbar'ı gizlemek için */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE ve Edge */
+  scrollbar-width: none; /* Firefox */
+}

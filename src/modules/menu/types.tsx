@@ -1,8 +1,10 @@
+import { IconType } from "react-icons";
+
 export type MenuItem = {
-  id: "home" | "events" | "places" | "cafes" | "map";
+  id: "events" | "places" | "home" | "cafes" | "map";
   title: string;
   path: string;
-  icon?: string;
+  icon: IconType;
 };
 
 export type MenuState = {
