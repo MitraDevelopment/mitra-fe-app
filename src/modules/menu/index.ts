@@ -1,10 +1,10 @@
 import {
-  MdHome,
-  MdCalendarMonth,
-  MdBusiness,
-  MdCoffee,
-  MdPublic,
-} from "react-icons/md";
+  IoCalendarNumber,
+} from "react-icons/io5";
+import { FaHouseChimneyWindow } from "react-icons/fa6";
+import { PiMosque } from "react-icons/pi";
+import { GiCoffeeCup } from "react-icons/gi";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { MenuItem } from "./types";
 
 export const menuConfig: MenuItem[] = [
@@ -12,31 +12,31 @@ export const menuConfig: MenuItem[] = [
     id: "events",
     title: "Events",
     path: "/events",
-    icon: MdCalendarMonth,
+    icon: IoCalendarNumber,
   },
   {
     id: "places",
     title: "Places",
     path: "/places",
-    icon: MdBusiness,
+    icon: PiMosque ,
   },
   {
     id: "home",
     title: "Home",
     path: "/",
-    icon: MdHome,
+    icon:  FaHouseChimneyWindow,
   },
   {
     id: "cafes",
     title: "Cafes",
     path: "/cafes",
-    icon: MdCoffee,
+    icon: GiCoffeeCup,
   },
   {
     id: "map",
     title: "Map",
     path: "/map",
-    icon: MdPublic,
+    icon: FaMapMarkerAlt ,
   },
 ];
 
